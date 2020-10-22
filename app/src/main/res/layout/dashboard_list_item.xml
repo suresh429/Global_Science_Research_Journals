@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#ffffff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDasBoardTitle"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/proxima_nova_bold"
+        android:text="@string/journal_home_tab"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground"
+        app:drawableRightCompat="@drawable/ic_arrow_right_24" />
+
+</androidx.cardview.widget.CardView>

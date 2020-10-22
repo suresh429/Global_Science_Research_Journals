@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="?attr/selectableItemBackground"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/txtArchiveHeadName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="@string/medical_sciences"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/recyclerviewChildList"
+          app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+          app:spanCount="2"
+          tools:listitem="@layout/archive_child_list_item"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

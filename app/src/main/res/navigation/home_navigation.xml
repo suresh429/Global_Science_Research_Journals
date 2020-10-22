@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home"
+    >
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.journals.gsrj.ui.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_abstractDisplayFragment"
+            app:destination="@id/abstractDisplayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.journals.gsrj.ui.fragments.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" >
+
+
+        <action
+            android:id="@+id/action_nav_contact_to_nav_home"
+            app:destination="@id/nav_home"
+            app:launchSingleTop="true"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.journals.gsrj.ui.fragments.CategoryFragment"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.journals.gsrj.ui.fragments.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_journalHomeFragment"
+            app:destination="@id/journalHomeFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_currentIssueFragment"
+            app:destination="@id/currentIssueFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_archiveFragment"
+            app:destination="@id/archiveFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_inPressFragment"
+            app:destination="@id/inPressFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_journalContactFragment"
+            app:destination="@id/journalContactFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_instructionsAuthorsFragment"
+            app:destination="@id/instructionsAuthorsFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_editorialBoardFragment"
+            app:destination="@id/editorialBoardFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/journalHomeFragment"
+        android:name="com.journals.gsrj.ui.fragments.JournalHomeFragment"
+        android:label="fragment_journal_home"
+        tools:layout="@layout/fragment_journal_home" />
+    <fragment
+        android:id="@+id/currentIssueFragment"
+        android:name="com.journals.gsrj.ui.fragments.CurrentIssueFragment"
+        android:label="fragment_current_issue"
+        tools:layout="@layout/fragment_current_issue" >
+        <action
+            android:id="@+id/action_currentIssueFragment_to_abstractDisplayFragment"
+            app:destination="@id/abstractDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inPressFragment"
+        android:name="com.journals.gsrj.ui.fragments.InPressFragment"
+        android:label="fragment_in_press"
+        tools:layout="@layout/fragment_in_press" >
+        <action
+            android:id="@+id/action_inPressFragment_to_abstractDisplayFragment"
+            app:destination="@id/abstractDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/archiveFragment"
+        android:name="com.journals.gsrj.ui.fragments.ArchiveFragment"
+        android:label="fragment_archive"
+        tools:layout="@layout/fragment_archive" >
+        <action
+            android:id="@+id/action_archiveFragment_to_volumeIssueFragment"
+            app:destination="@id/volumeIssueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/abstractDisplayFragment"
+        android:name="com.journals.gsrj.ui.fragments.AbstractDisplayFragment"
+        android:label="AbstractDisplayFragment" />
+    <fragment
+        android:id="@+id/volumeIssueFragment"
+        android:name="com.journals.gsrj.ui.fragments.VolumeIssueFragment"
+        android:label="VolumeIssueFragment" >
+        <action
+            android:id="@+id/action_volumeIssueFragment_to_abstractDisplayFragment"
+            app:destination="@id/abstractDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalContactFragment"
+        android:name="com.journals.gsrj.ui.fragments.JournalContactFragment"
+        android:label="Contact Us" />
+    <fragment
+        android:id="@+id/editorialBoardFragment"
+        android:name="com.journals.gsrj.ui.fragments.EditorialBoardFragment"
+        android:label="EditorialBoardFragment" >
+        <action
+            android:id="@+id/action_editorialBoardFragment_to_biographyResearchFragment"
+            app:destination="@id/biographyResearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/biographyResearchFragment"
+        android:name="com.journals.gsrj.ui.fragments.BiographyResearchFragment"
+        android:label="fragment_biography_research"
+        tools:layout="@layout/fragment_biography_research" />
+    <fragment
+        android:id="@+id/instructionsAuthorsFragment"
+        android:name="com.journals.gsrj.ui.fragments.InstructionsAuthorsFragment"
+        android:label="InstructionsAuthorsFragment" />
+
+
+</navigation>
